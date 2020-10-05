@@ -1,0 +1,22 @@
+{
+    "variables": {
+        "github_workspace": "{{env `GITHUB_WORKSPACE`}}"
+    },
+    "builders": [
+        {
+            "type": "vagrant",
+            "source_path": "hashicorp/bionic64",
+            "output_dir": "{{user `github_workspace`}}/output"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": ["echo 'moo' > /moo"]
+          }          
+    ],
+    "post-processors": [{
+        "type": "vagrant",
+        "provider_override": "virtualbox"
+    }]
+}
