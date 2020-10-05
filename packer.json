@@ -24,7 +24,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "inline": ["echo 'moo' > /moo"]
+            "inline": ["sudo bash -c 'uname -a > /moo'"]
           }          
     ],
     "post-processors": [{
