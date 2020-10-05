@@ -1,8 +1,5 @@
 name: Packer
-on:
-  push:
-      paths:
-        - '*.json'
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,5 +19,3 @@ jobs:
       - name: packer build packer.json
         run: |
           packer build packer.json
-
-# moo
