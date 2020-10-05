@@ -28,7 +28,6 @@
           }          
     ],
     "post-processors": [{
-        "type": "vagrant",
-        "provider_override": "virtualbox"
+        "type": "vagrant"
     }]
 }
