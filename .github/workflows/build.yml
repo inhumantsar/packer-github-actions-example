@@ -20,3 +20,7 @@ jobs:
       - name: packer build packer.json
         run: |
           packer build packer.json
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET }}
+          AWS_DEFAULT_REGION: ca-central-1
